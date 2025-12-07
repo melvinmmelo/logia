@@ -73,6 +73,14 @@ body {
     color: var(--primary-color);
     text-decoration: none;
     letter-spacing: -0.025em;
+    display: flex;
+    align-items: center;
+}
+
+.logo-img {
+    height: 2.5rem;
+    width: auto;
+    display: block;
 }
 
 .nav-menu {
