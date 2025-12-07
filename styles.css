@@ -249,17 +249,27 @@ body {
     padding: 1rem 1.5rem;
     border-radius: 0.5rem;
     border-left: 3px solid var(--primary-color);
+    opacity: 0;
+    animation: fadeInUp 0.8s ease-out 0.5s forwards;
 }
 
 .code-snippet code {
     font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
     font-size: 0.875rem;
     color: var(--text-secondary);
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: typing 2s steps(50) 1.3s forwards, blink 0.75s step-end infinite;
+    border-right: 2px solid var(--primary-color);
+    width: 0;
 }
 
 .code-prompt {
     color: var(--primary-color);
     margin-right: 0.5rem;
+    opacity: 0;
+    animation: fadeIn 0.3s ease-out 1.3s forwards;
 }
 
 .hero-media {
@@ -684,6 +694,35 @@ body {
     to {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes blink {
+    0%, 50% {
+        border-right-color: var(--primary-color);
+    }
+    51%, 100% {
+        border-right-color: transparent;
     }
 }
 
