@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Privacy Policy — Steward</title>
+  <style>
+    :root {
+      --bg: #f7f4ee;
+      --card: #ffffff;
+      --text: #1c2b26;
+      --muted: #5b6b66;
+      --accent: #0E5548;
+      --border: #d9e2dd;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+    }
+    .wrap {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 32px 20px 64px;
+    }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 32px;
+      box-shadow: 0 10px 30px rgba(8, 58, 49, 0.06);
+    }
+    h1, h2, h3 { line-height: 1.2; color: var(--accent); }
+    h1 { font-size: 2rem; margin: 0 0 12px; }
+    h2 { font-size: 1.25rem; margin-top: 32px; }
+    h3 { font-size: 1rem; margin-top: 24px; }
+    p, li { font-size: 1rem; }
+    .meta { color: var(--muted); margin-bottom: 24px; }
+    .summary {
+      border-left: 4px solid var(--accent);
+      background: #f3f8f6;
+      padding: 16px 18px;
+      border-radius: 12px;
+      margin: 20px 0 28px;
+    }
+    code { background: #f1f3f2; padding: 2px 6px; border-radius: 6px; }
+    a { color: var(--accent); }
+    blockquote {
+      margin: 16px 0;
+      padding: 12px 16px;
+      background: #fafcfc;
+      border-left: 4px solid var(--border);
+      color: var(--muted);
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card">
+      <h1>Privacy Policy — Steward</h1>
+      <p class="meta"><strong>Last updated:</strong> 2026-04-27</p>
+
+      <p>This privacy policy describes how the Android application <strong>Steward</strong> (package name <code>com.melvs.mykapayamanfi</code>, hereafter “the app”) handles information. The app is a personal finance tracker built and maintained by an individual developer (“we”, “us”) and is distributed through the Google Play Store.</p>
+
+      <div class="summary">
+        <strong>Summary</strong>
+        <ul>
+          <li>The app stores all of your financial data <strong>locally on your device</strong>.</li>
+          <li>The app does <strong>not</strong> create an account, sign you in, or sync your data to any server.</li>
+          <li>The app does <strong>not</strong> sell or share your personal or financial data with third parties.</li>
+          <li>The only outbound network traffic is the standard Expo over-the-air update check.</li>
+        </ul>
+      </div>
+
+      <h2>Information We Process</h2>
+
+      <h3>Information you enter</h3>
+      <p>You can enter the following inside the app:</p>
+      <ul>
+        <li>Account names (for example Cash, GCash, Maya, BPI) and optional notes</li>
+        <li>Opening balances and credit-card-related fields</li>
+        <li>Income and expense entries: amount, account, category, date, and optional notes</li>
+        <li>Loans you record: the other person's name, amount, optional interest rate, term, due date, status, and notes</li>
+        <li>Loan payments and account-to-account transfers</li>
+        <li>Custom income and expense categories</li>
+        <li>App preferences such as currency</li>
+        <li>An optional numeric PIN to lock the app</li>
+      </ul>
+      <p>All of this data is stored in a local SQLite database on your device. It is not transmitted off the device by the app.</p>
+
+      <h3>Information automatically collected</h3>
+      <p>The app does not include analytics, advertising, or crash reporting SDKs. We do not collect device identifiers, IP addresses, location, contacts, photos, or any other content from your device.</p>
+
+      <h3>Notifications</h3>
+      <p>If you grant notification permission, the app schedules <strong>local</strong> notifications on your device to remind you of upcoming loan due dates. No server is involved and no data leaves your device for this feature.</p>
+
+      <h3>Secure storage</h3>
+      <p>If you enable the optional PIN lock, the PIN is stored using your device’s secure storage via <code>expo-secure-store</code>. It is not transmitted off the device.</p>
+
+      <h2>Network Activity</h2>
+      <p>The app uses Expo’s over-the-air update mechanism (<code>expo-updates</code>). When the app starts it may make a request to Expo’s update server (<code>https://u.expo.dev/...</code>) to check whether a new JavaScript bundle is available and may download that bundle. This request includes basic technical metadata required by the update protocol, such as the runtime version of the app. It does not include the contents of your accounts, entries, loans, or other financial data.</p>
+      <p>The app does not make any other network calls in normal operation.</p>
+
+      <h2>How We Use Your Information</h2>
+      <p>Information you enter is used solely to:</p>
+      <ul>
+        <li>display your accounts, balances, entries, loans, and totals inside the app,</li>
+        <li>compute derived values such as account balances and loan progress,</li>
+        <li>schedule local reminder notifications that you opted into.</li>
+      </ul>
+      <p>We do not use your information for advertising, profiling, or analytics.</p>
+
+      <h2>Sharing</h2>
+      <p>We do not share, sell, rent, or trade your information with third parties. There is no backend operated by us. Because the data lives on your device, the people who can see it are the people who can unlock your phone and unlock the app’s PIN, if you set one.</p>
+
+      <h2>Your Choices and Controls</h2>
+      <ul>
+        <li><strong>Edit or delete entries.</strong> You can edit or delete any account, entry, loan, payment, transfer, or category inside the app at any time.</li>
+        <li><strong>Notifications.</strong> You can revoke notification permission at any time in Android system settings.</li>
+        <li><strong>Delete all data.</strong> Uninstalling the app, or clearing its storage from Android settings, removes the local database and any stored PIN.</li>
+      </ul>
+      <p>Because the data is local, we cannot delete it for you remotely.</p>
+
+      <h2>Data Retention</h2>
+      <p>Your data remains on your device until you delete it or uninstall the app.</p>
+
+      <h2>Children’s Privacy</h2>
+      <p>The app is not directed to children under 13. It is a personal finance utility intended for general personal use.</p>
+
+      <h2>Security</h2>
+      <p>Your data is stored in your device’s app-private storage. The optional PIN is stored using Android secure storage. The security of your device — screen lock, OS updates, and full-disk encryption — is your responsibility.</p>
+
+      <h2>Changes to This Policy</h2>
+      <p>We may update this policy as the app changes. The “Last updated” date at the top will reflect the most recent revision. If a future version of the app adds features that change the information handling described here, for example optional cloud backup, the policy will be updated before that release.</p>
+
+      <h2>Contact</h2>
+      <p>For questions about this policy, contact:</p>
+      <p><strong>Email:</strong> <a href="mailto:melvsmmelo@gmail.com">melvsmmelo@gmail.com</a></p>
+    </div>
+  </div>
+</body>
+</html>
