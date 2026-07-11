@@ -12,17 +12,19 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Logia Innovations - Empowering Businesses with Intelligent, Modern Solutions">
     <meta name="twitter:description" content="We combine modern engineering practices with AI to help SMBs accelerate growth and build smarter digital experiences.">
-    <meta name="twitter:image" content="https://logiainnov.com/logo.jpg">
+    <meta name="twitter:image" content="https://logiainnov.com/logo-indigo.png">
     <title>Logia Innovations - Empowering Businesses with Intelligent, Modern Solutions</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+    <link rel="shortcut icon" href="img/favicon.ico">
+    <link rel="stylesheet" href="tokens.css?v=g2">
+    <link rel="stylesheet" href="styles.css?v=g2">
 </head>
 <body>
     <!-- Banner -->
     <div class="banner">
-        <p>Transform your business with AI-powered solutions. Let's build something extraordinary together →</p>
+        <p>Transform your business with AI-powered solutions. Let's build something extraordinary together <span class="banner-arrow">→</span></p>
     </div>
 
     <!-- Navigation -->
@@ -31,12 +33,12 @@
             <div class="nav-wrapper">
                 <a href="#" class="logo">
                     <picture>
-                        <source srcset="logo.jpg" type="image/webp">
-                        <img src="logo.jpg" alt="Logia" class="logo-img">
+                        <source srcset="img/logo-128.webp" type="image/webp">
+                        <img src="logo-indigo.png" alt="Logia Innovations" class="logo-img">
                     </picture>
                 </a>
 
-                <ul class="nav-menu">
+                <ul class="nav-menu" id="nav-menu">
                     <li class="nav-item">
                         <a href="#about" class="nav-link">About</a>
                     </li>
@@ -55,7 +57,7 @@
                 </ul>
 
                 <div class="nav-right">
-                    <a href="https://github.com/melvinmmelo/logia.git" class="github-link">
+                    <a href="https://github.com/melvinmmelo/logia.git" class="github-link" aria-label="GitHub">
                         <svg width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
                             <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
                         </svg>
@@ -64,20 +66,42 @@
                     <!-- <a href="#contact" class="btn btn-primary">Get in Touch</a> -->
                 </div>
 
-                <button class="mobile-menu-toggle" aria-label="Toggle menu">
-                    <span></span>
-                    <span></span>
-                    <span></span>
+                <button class="mobile-menu-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-menu">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
                 </button>
             </div>
         </div>
     </nav>
 
+    <main>
     <!-- Hero Section -->
     <section class="hero">
-        <div class="hero-background">
-            <div class="hero-gradient"></div>
-            <div class="hero-pattern"></div>
+        <div class="hero-background dot-grid">
+            <svg class="lattice-svg hero-lattice" viewBox="0 0 1440 560" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+              <path class="lattice-line" style="animation-delay:0ms"   d="M1140 90 L1240 170"/>
+              <path class="lattice-line" style="animation-delay:80ms"  d="M1240 170 L1160 300"/>
+              <path class="lattice-line" style="animation-delay:120ms" d="M1240 170 L1320 110"/>
+              <path class="lattice-line" style="animation-delay:180ms" d="M1320 110 L1380 260"/>
+              <path class="lattice-line" style="animation-delay:220ms" d="M1380 260 L1280 380"/>
+              <path class="lattice-line" style="animation-delay:260ms" d="M1160 300 L1280 380"/>
+              <path class="lattice-line" style="animation-delay:300ms" d="M60 170 L160 220"/>
+              <path class="lattice-line" style="animation-delay:340ms" d="M160 220 L90 360"/>
+              <path class="lattice-line" style="animation-delay:380ms" d="M160 220 L240 180"/>
+              <path class="lattice-line" style="animation-delay:420ms" d="M90 360 L200 420"/>
+              <circle class="lattice-node"       style="animation-delay:600ms" cx="1240" cy="170" r="6"/>
+              <circle class="lattice-node"       style="animation-delay:660ms" cx="1320" cy="110" r="6"/>
+              <circle class="lattice-node"       style="animation-delay:720ms" cx="1280" cy="380" r="6"/>
+              <circle class="lattice-node"       style="animation-delay:780ms" cx="160"  cy="220" r="6"/>
+              <circle class="lattice-node-plain" style="animation-delay:640ms" cx="1140" cy="90"  r="4"/>
+              <circle class="lattice-node-plain" style="animation-delay:700ms" cx="1160" cy="300" r="4"/>
+              <circle class="lattice-node-plain" style="animation-delay:760ms" cx="1380" cy="260" r="4"/>
+              <circle class="lattice-node-plain" style="animation-delay:820ms" cx="60"   cy="170" r="4"/>
+              <circle class="lattice-node-plain" style="animation-delay:860ms" cx="240"  cy="180" r="4"/>
+              <circle class="lattice-node-plain" style="animation-delay:900ms" cx="90"   cy="360" r="4"/>
+              <circle class="lattice-node-plain" style="animation-delay:940ms" cx="200"  cy="420" r="4"/>
+            </svg>
         </div>
         <div class="container">
             <div class="hero-content">
@@ -128,10 +152,10 @@
         <div class="container">
             <div class="section-header">
                 <div class="section-icon">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                        <path d="M12 2L2 7L12 12L22 7L12 2Z"></path>
-                        <path d="M2 17L12 22L22 17"></path>
-                        <path d="M2 12L12 17L22 12"></path>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <path d="M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83z" />
+                        <path d="M2 12a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 12" />
+                        <path d="M2 17a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 17" />
                     </svg>
                 </div>
                 <h2 class="section-label">About Us</h2>
@@ -157,10 +181,19 @@
         <div class="container">
             <div class="section-header">
                 <div class="section-icon">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                        <path d="M12 2L2 7L12 12L22 7L12 2Z"></path>
-                        <path d="M2 17L12 22L22 17"></path>
-                        <path d="M2 12L12 17L22 12"></path>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <path d="M2.97 12.92A2 2 0 0 0 2 14.63v3.24a2 2 0 0 0 .97 1.71l3 1.8a2 2 0 0 0 2.06 0L12 19v-5.5l-5-3-4.03 2.42Z" />
+                        <path d="m7 16.5-4.74-2.85" />
+                        <path d="m7 16.5 5-3" />
+                        <path d="M7 16.5v5.17" />
+                        <path d="M12 13.5V19l3.97 2.38a2 2 0 0 0 2.06 0l3-1.8a2 2 0 0 0 .97-1.71v-3.24a2 2 0 0 0-.97-1.71L17 10.5l-5 3Z" />
+                        <path d="m17 16.5-5-3" />
+                        <path d="m17 16.5 4.74-2.85" />
+                        <path d="M17 16.5v5.17" />
+                        <path d="M7.97 4.42A2 2 0 0 0 7 6.13v4.37l5 3 5-3V6.13a2 2 0 0 0-.97-1.71l-3-1.8a2 2 0 0 0-2.06 0l-3 1.8Z" />
+                        <path d="M12 8 7.26 5.15" />
+                        <path d="m12 8 4.74-2.85" />
+                        <path d="M12 13.5V8" />
                     </svg>
                 </div>
                 <h2 class="section-label">What We Do</h2>
@@ -176,7 +209,11 @@
             <div class="packages-grid">
                 <div class="package-card">
                     <div class="package-icon">
-                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect fill='%23FF2D20' width='100' height='100' rx='20'/%3E%3Ctext x='50' y='65' font-size='50' text-anchor='middle' fill='white' font-family='Arial'%3EC%3C/text%3E%3C/svg%3E" alt="Custom Software">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="m10 9-3 3 3 3" />
+                            <path d="m14 15 3-3-3-3" />
+                            <rect x="3" y="3" width="18" height="18" rx="2" />
+                        </svg>
                     </div>
                     <div class="package-info">
                         <div class="package-header">
@@ -188,7 +225,12 @@
 
                 <div class="package-card">
                     <div class="package-icon">
-                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect fill='%234CAF50' width='100' height='100' rx='20'/%3E%3Ctext x='50' y='65' font-size='50' text-anchor='middle' fill='white' font-family='Arial'%3EA%3C/text%3E%3C/svg%3E" alt="AI Solutions">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M11.017 2.814a1 1 0 0 1 1.966 0l1.051 5.558a2 2 0 0 0 1.594 1.594l5.558 1.051a1 1 0 0 1 0 1.966l-5.558 1.051a2 2 0 0 0-1.594 1.594l-1.051 5.558a1 1 0 0 1-1.966 0l-1.051-5.558a2 2 0 0 0-1.594-1.594l-5.558-1.051a1 1 0 0 1 0-1.966l5.558-1.051a2 2 0 0 0 1.594-1.594z" />
+                            <path d="M20 2v4" />
+                            <path d="M22 4h-4" />
+                            <circle cx="4" cy="20" r="2" />
+                        </svg>
                     </div>
                     <div class="package-info">
                         <div class="package-header">
@@ -200,7 +242,10 @@
 
                 <div class="package-card">
                     <div class="package-icon">
-                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect fill='%232196F3' width='100' height='100' rx='20'/%3E%3Ctext x='50' y='65' font-size='50' text-anchor='middle' fill='white' font-family='Arial'%3ED%3C/text%3E%3C/svg%3E" alt="Digital Transformation">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M16 7h6v6" />
+                            <path d="m22 7-8.5 8.5-5-5L2 17" />
+                        </svg>
                     </div>
                     <div class="package-info">
                         <div class="package-header">
@@ -212,7 +257,14 @@
 
                 <div class="package-card">
                     <div class="package-icon">
-                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect fill='%239C27B0' width='100' height='100' rx='20'/%3E%3Ctext x='50' y='65' font-size='50' text-anchor='middle' fill='white' font-family='Arial'%3ET%3C/text%3E%3C/svg%3E" alt="Technical Support">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <circle cx="12" cy="12" r="10" />
+                            <path d="m4.93 4.93 4.24 4.24" />
+                            <path d="m14.83 9.17 4.24-4.24" />
+                            <path d="m14.83 14.83 4.24 4.24" />
+                            <path d="m9.17 14.83-4.24 4.24" />
+                            <circle cx="12" cy="12" r="4" />
+                        </svg>
                     </div>
                     <div class="package-info">
                         <div class="package-header">
@@ -230,9 +282,10 @@
         <div class="container">
             <div class="section-header">
                 <div class="section-icon">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                        <polyline points="16 18 22 12 16 6"></polyline>
-                        <polyline points="8 6 2 12 8 18"></polyline>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <path d="m18 16 4-4-4-4" />
+                        <path d="m6 8-4 4 4 4" />
+                        <path d="m14.5 4-5 16" />
                     </svg>
                 </div>
                 <h2 class="section-label">Our Approach</h2>
@@ -243,7 +296,7 @@
             <div class="packages-grid">
                 <div class="package-card">
                     <div class="package-icon">
-                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect fill='%23FF2D20' width='100' height='100' rx='20'/%3E%3Ctext x='50' y='65' font-size='50' text-anchor='middle' fill='white' font-family='Arial'%3E1%3C/text%3E%3C/svg%3E" alt="We Listen">
+                        <span class="step-number" aria-hidden="true">1</span>
                     </div>
                     <div class="package-info">
                         <div class="package-header">
@@ -255,7 +308,7 @@
 
                 <div class="package-card">
                     <div class="package-icon">
-                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect fill='%234CAF50' width='100' height='100' rx='20'/%3E%3Ctext x='50' y='65' font-size='50' text-anchor='middle' fill='white' font-family='Arial'%3E2%3C/text%3E%3C/svg%3E" alt="We Build">
+                        <span class="step-number" aria-hidden="true">2</span>
                     </div>
                     <div class="package-info">
                         <div class="package-header">
@@ -267,7 +320,7 @@
 
                 <div class="package-card">
                     <div class="package-icon">
-                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect fill='%232196F3' width='100' height='100' rx='20'/%3E%3Ctext x='50' y='65' font-size='50' text-anchor='middle' fill='white' font-family='Arial'%3E3%3C/text%3E%3C/svg%3E" alt="We Deploy">
+                        <span class="step-number" aria-hidden="true">3</span>
                     </div>
                     <div class="package-info">
                         <div class="package-header">
@@ -285,8 +338,11 @@
         <div class="container">
             <div class="section-header">
                 <div class="section-icon">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                        <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"></path>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <path d="M11.017 2.814a1 1 0 0 1 1.966 0l1.051 5.558a2 2 0 0 0 1.594 1.594l5.558 1.051a1 1 0 0 1 0 1.966l-5.558 1.051a2 2 0 0 0-1.594 1.594l-1.051 5.558a1 1 0 0 1-1.966 0l-1.051-5.558a2 2 0 0 0-1.594-1.594l-5.558-1.051a1 1 0 0 1 0-1.966l5.558-1.051a2 2 0 0 0 1.594-1.594z" />
+                        <path d="M20 2v4" />
+                        <path d="M22 4h-4" />
+                        <circle cx="4" cy="20" r="2" />
                     </svg>
                 </div>
                 <h2 class="section-label">Why Logia?</h2>
@@ -339,9 +395,11 @@
         <div class="container">
             <div class="section-header">
                 <div class="section-icon">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                        <rect x="3" y="3" width="18" height="18" rx="2"></rect>
-                        <path d="M9 9H15V15H9V9Z"></path>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <rect width="7" height="7" x="3" y="3" rx="1" />
+                        <rect width="7" height="7" x="14" y="3" rx="1" />
+                        <rect width="7" height="7" x="14" y="14" rx="1" />
+                        <rect width="7" height="7" x="3" y="14" rx="1" />
                     </svg>
                 </div>
                 <h2 class="section-label">Our Services</h2>
@@ -412,10 +470,21 @@
         <div class="container">
             <div class="section-header">
                 <div class="section-icon">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                        <path d="M12 2L2 7L12 12L22 7L12 2Z"></path>
-                        <path d="M2 17L12 22L22 17"></path>
-                        <path d="M2 12L12 17L22 12"></path>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <path d="M12 20v2" />
+                        <path d="M12 2v2" />
+                        <path d="M17 20v2" />
+                        <path d="M17 2v2" />
+                        <path d="M2 12h2" />
+                        <path d="M2 17h2" />
+                        <path d="M2 7h2" />
+                        <path d="M20 12h2" />
+                        <path d="M20 17h2" />
+                        <path d="M20 7h2" />
+                        <path d="M7 20v2" />
+                        <path d="M7 2v2" />
+                        <rect x="4" y="4" width="16" height="16" rx="2" />
+                        <rect x="8" y="8" width="8" height="8" rx="1" />
                     </svg>
                 </div>
                 <h2 class="section-label">Technology We Use</h2>
@@ -464,8 +533,8 @@
         <div class="container">
             <div class="section-header">
                 <div class="section-icon">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                        <path d="M21 15C21 15.5304 20.7893 16.0391 20.4142 16.4142C20.0391 16.7893 19.5304 17 19 17H7L3 21V5C3 4.46957 3.21071 3.96086 3.58579 3.58579C3.96086 3.21071 4.46957 3 5 3H19C19.5304 3 20.0391 3.21071 20.4142 3.58579C20.7893 3.96086 21 4.46957 21 5V15Z"></path>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <path d="M22 17a2 2 0 0 1-2 2H6.828a2 2 0 0 0-1.414.586l-2.202 2.202A.71.71 0 0 1 2 21.286V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2z" />
                     </svg>
                 </div>
                 <h2 class="section-label">Work With Us</h2>
@@ -479,49 +548,83 @@
             </p>
 
             <div class="packages-grid" style="max-width: 800px; margin: 3rem auto;">
-                <div class="package-card" style="text-align: center;">
+                <div class="package-card" style="text-align: center; flex-direction: column; align-items: center;">
+                    <div class="contact-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7" />
+                            <rect x="2" y="4" width="20" height="16" rx="2" />
+                        </svg>
+                    </div>
                     <div class="package-info">
-                        <h4 class="package-name">📩 Email</h4>
+                        <h4 class="package-name">Email</h4>
                         <p class="package-description">
-                            <a href="mailto:client.services@logiainnov.com" style="color: inherit; text-decoration: underline;">client.services@logiainnov.com</a>
+                            <a href="mailto:client.services@logiainnov.com" style="color: var(--primary-color); text-decoration: underline;">client.services@logiainnov.com</a>
                         </p>
                     </div>
                 </div>
 
-                <div class="package-card" style="text-align: center;">
+                <div class="package-card" style="text-align: center; flex-direction: column; align-items: center;">
+                    <div class="contact-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384" />
+                        </svg>
+                    </div>
                     <div class="package-info">
-                        <h4 class="package-name">📞 Phone</h4>
+                        <h4 class="package-name">Phone</h4>
                         <p class="package-description">+63 994 147 1945</p>
                     </div>
                 </div>
 
-                <div class="package-card" style="text-align: center;">
+                <div class="package-card" style="text-align: center; flex-direction: column; align-items: center;">
+                    <div class="contact-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0" />
+                            <circle cx="12" cy="10" r="3" />
+                        </svg>
+                    </div>
                     <div class="package-info">
-                        <h4 class="package-name">📍 Location</h4>
+                        <h4 class="package-name">Location</h4>
                         <p class="package-description">Philippines</p>
                     </div>
                 </div>
 
-                <div class="package-card" style="text-align: center;">
+                <div class="package-card" style="text-align: center; flex-direction: column; align-items: center;">
+                    <div class="contact-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <circle cx="12" cy="12" r="10" />
+                            <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20" />
+                            <path d="M2 12h20" />
+                        </svg>
+                    </div>
                     <div class="package-info">
-                        <h4 class="package-name">🌐 Social</h4>
+                        <h4 class="package-name">Social</h4>
                         <p class="package-description">Logia Innovations Software Development Services</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+    </main>
 
     <!-- Footer -->
-    <footer class="footer" id="contact">
+    <footer class="footer dot-grid">
+        <svg class="lattice-svg footer-lattice" viewBox="0 0 1440 360" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+          <path class="lattice-line" style="animation-delay:0ms"   d="M1180 60 L1280 120"/>
+          <path class="lattice-line" style="animation-delay:120ms" d="M1280 120 L1200 220"/>
+          <path class="lattice-line" style="animation-delay:180ms" d="M1280 120 L1360 90"/>
+          <path class="lattice-line" style="animation-delay:240ms" d="M1360 90 L1340 240"/>
+          <path class="lattice-line" style="animation-delay:300ms" d="M1200 220 L1340 240"/>
+          <circle class="lattice-node"       style="animation-delay:600ms" cx="1280" cy="120" r="5"/>
+          <circle class="lattice-node"       style="animation-delay:680ms" cx="1340" cy="240" r="5"/>
+          <circle class="lattice-node-plain" style="animation-delay:640ms" cx="1180" cy="60"  r="4"/>
+          <circle class="lattice-node-plain" style="animation-delay:720ms" cx="1360" cy="90"  r="4"/>
+          <circle class="lattice-node-plain" style="animation-delay:760ms" cx="1200" cy="220" r="4"/>
+        </svg>
         <div class="container">
             <div class="footer-content">
                 <div class="footer-brand">
                     <div class="footer-logo">
-                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
-                            <rect width="48" height="48" rx="8" fill="#FF2D20"/>
-                            <path d="M24 14L32 18V30L24 34L16 30V18L24 14Z" stroke="white" stroke-width="2" fill="none"/>
-                        </svg>
+                        <img src="logo-indigo.png" alt="Logia Innovations" width="48" height="48">
                     </div>
                     <p class="footer-tagline">
                         Logia Innovations — SDS<br>
@@ -603,12 +706,12 @@
                 </div>
             </div>
 
-            <div class="footer-logo-large">
+            <div class="footer-logo-large" aria-hidden="true">
                 <h2>Logia</h2>
             </div>
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="script.js?v=g1"></script>
 </body>
 </html>

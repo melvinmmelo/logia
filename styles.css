@@ -6,15 +6,15 @@
 }
 
 :root {
-    --primary-color: #FF2D20;
-    --primary-dark: #E02414;
-    --text-primary: #1F2937;
-    --text-secondary: #6B7280;
-    --text-light: #9CA3AF;
-    --bg-light: #F9FAFB;
+    --primary-color: #3A2FB5;
+    --primary-dark: #2E2593;
+    --text-primary: #17162B;
+    --text-secondary: #5B6072;
+    --text-light: #5B6072;
+    --bg-light: #F6F7FB;
     --bg-white: #FFFFFF;
-    --border-color: #E5E7EB;
-    --code-bg: #F3F4F6;
+    --border-color: #E2E4EF;
+    --code-bg: #EEEDFB;
 }
 
 html {
@@ -22,10 +22,11 @@ html {
 }
 
 body {
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-family: var(--font-sans);
     color: var(--text-primary);
     line-height: 1.6;
     overflow-x: hidden;
+    background: var(--bg-light);
 }
 
 .container {
@@ -36,12 +37,16 @@ body {
 
 /* Banner */
 .banner {
-    background: var(--primary-color);
-    color: white;
+    background: var(--wash);
+    color: var(--text-primary);
     text-align: center;
     padding: 0.75rem 1rem;
     font-size: 0.875rem;
     font-weight: 500;
+}
+
+.banner .banner-arrow {
+    color: var(--primary-color);
 }
 
 .banner p {
@@ -186,42 +191,18 @@ body {
     z-index: 0;
 }
 
-.hero-gradient {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(135deg, #fef2f2 0%, #fff 30%, #f0f9ff 100%);
-    opacity: 0.8;
-}
-
-.hero-pattern {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-image:
-        radial-gradient(circle at 20% 30%, rgba(255, 45, 32, 0.05) 0%, transparent 50%),
-        radial-gradient(circle at 80% 70%, rgba(255, 45, 32, 0.03) 0%, transparent 50%);
-    animation: patternFloat 20s ease-in-out infinite;
-}
-
-@keyframes patternFloat {
-    0%, 100% { transform: translateY(0) scale(1); }
-    50% { transform: translateY(-20px) scale(1.05); }
-}
-
 .hero-content {
     text-align: center;
+    position: relative;
+    z-index: 1;
 }
 
 .hero-title {
-    font-size: 3.75rem;
-    line-height: 1.1;
+    font-family: var(--font-display);
+    font-size: clamp(2.75rem, 5vw, 4.25rem);
+    line-height: 1.02;
     font-weight: 700;
-    letter-spacing: -0.025em;
+    letter-spacing: -0.02em;
     margin-bottom: 1.5rem;
     color: var(--text-primary);
     opacity: 0;
@@ -230,10 +211,6 @@ body {
 
 .text-highlight {
     color: var(--primary-color);
-    background: linear-gradient(135deg, #FF2D20 0%, #ff4d3d 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
     position: relative;
     display: inline-block;
 }
@@ -258,11 +235,11 @@ body {
 
 .btn {
     padding: 0.75rem 1.5rem;
-    border-radius: 0.5rem;
+    border-radius: var(--radius-pill);
     text-decoration: none;
     font-weight: 600;
     font-size: 0.9375rem;
-    transition: all 0.2s;
+    transition: all 150ms;
     display: inline-block;
     border: none;
     cursor: pointer;
@@ -271,26 +248,25 @@ body {
 .btn-primary {
     background: var(--primary-color);
     color: white;
-    box-shadow: 0 4px 14px rgba(255, 45, 32, 0.25);
 }
 
 .btn-primary:hover {
-    background: #d92415;
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(255, 45, 32, 0.35);
+    background: var(--primary-dark);
+    transform: translateY(-1px);
+    box-shadow: 0 6px 20px rgba(46, 37, 147, 0.28);
 }
 
 .btn-secondary {
     background: var(--bg-white);
     color: var(--text-primary);
-    border: 2px solid var(--text-primary);
+    border: 1px solid var(--border-color);
 }
 
 .btn-secondary:hover {
-    background: var(--text-primary);
-    color: white;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    background: var(--bg-light);
+    color: var(--text-primary);
+    transform: translateY(-1px);
+    box-shadow: none;
 }
 
 .code-snippet {
@@ -304,15 +280,13 @@ body {
 }
 
 .code-snippet code {
-    font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+    font-family: var(--font-mono);
     font-size: 0.875rem;
     color: var(--text-secondary);
     display: inline-block;
     overflow: hidden;
     white-space: nowrap;
-    animation: typing 2s steps(50) 1.3s forwards, blink 0.75s step-end infinite;
-    border-right: 2px solid var(--primary-color);
-    width: 0;
+    width: auto;
 }
 
 .code-prompt {
@@ -342,10 +316,6 @@ body {
     color: var(--primary-color);
     line-height: 1;
     margin-bottom: 0.5rem;
-    background: linear-gradient(135deg, #FF2D20 0%, #ff4d3d 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
 }
 
 .stat-label {
@@ -401,7 +371,7 @@ body {
 /* Ecosystem Section */
 .ecosystem {
     padding: 6rem 0;
-    background: var(--bg-white);
+    background: var(--bg-light);
 }
 
 .section-header {
@@ -413,20 +383,23 @@ body {
 
 .section-icon {
     color: var(--primary-color);
+    display: flex;
 }
 
 .section-label {
-    font-size: 0.875rem;
-    font-weight: 600;
+    font-family: var(--font-mono);
+    font-size: 0.8125rem;
+    font-weight: 500;
     color: var(--primary-color);
     text-transform: uppercase;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.08em;
 }
 
 .ecosystem-title {
-    font-size: 2.5rem;
+    font-family: var(--font-display);
+    font-size: 2rem;
     font-weight: 700;
-    line-height: 1.2;
+    line-height: 1.1;
     margin-bottom: 1.5rem;
     color: var(--text-primary);
 }
@@ -491,24 +464,59 @@ body {
     background: var(--bg-white);
     border: 1px solid var(--border-color);
     border-radius: 0.75rem;
-    transition: all 0.2s;
+    transition: all 150ms;
     cursor: pointer;
 }
 
 .package-card:hover {
     border-color: var(--primary-color);
-    box-shadow: 0 4px 20px rgba(255, 45, 32, 0.1);
-    transform: translateY(-2px);
+    box-shadow: 0 4px 20px rgba(58, 47, 181, 0.10);
+    /* !important: script.js's IntersectionObserver reveal sets an inline
+       transform:translateY(0) on cards once visible (PARKED — see
+       docs/STATE.md); a stylesheet rule alone can't out-rank an inline
+       style, so the hover lift needs this to actually apply post-reveal. */
+    transform: translateY(-1px) !important;
 }
 
 .package-icon {
     flex-shrink: 0;
-}
-
-.package-icon img {
     width: 48px;
     height: 48px;
-    border-radius: 0.5rem;
+    border-radius: 0.75rem;
+    background: var(--code-bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.package-icon svg {
+    width: 24px;
+    height: 24px;
+    color: var(--primary-color);
+}
+
+.package-icon .step-number {
+    font-family: var(--font-mono);
+    font-weight: 500;
+    font-size: 1.25rem;
+    color: var(--primary-color);
+}
+
+.contact-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 0.75rem;
+    background: var(--code-bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 0.75rem;
+}
+
+.contact-icon svg {
+    width: 20px;
+    height: 20px;
+    color: var(--primary-color);
 }
 
 .package-info {
@@ -556,6 +564,8 @@ body {
     grid-template-columns: 1fr 2fr;
     gap: 4rem;
     margin-bottom: 3rem;
+    position: relative;
+    z-index: 1;
 }
 
 .footer-brand {
@@ -564,14 +574,15 @@ body {
     gap: 1.5rem;
 }
 
-.footer-logo svg {
+.footer-logo img {
     width: 48px;
     height: 48px;
+    display: block;
 }
 
 .footer-tagline {
     font-size: 1.125rem;
-    color: var(--primary-color);
+    color: var(--text-secondary);
     line-height: 1.6;
     font-weight: 500;
 }
@@ -625,6 +636,8 @@ body {
 .footer-bottom {
     padding-top: 2rem;
     border-top: 1px solid var(--border-color);
+    position: relative;
+    z-index: 1;
 }
 
 .footer-legal {
@@ -649,10 +662,11 @@ body {
     bottom: -2rem;
     right: -2rem;
     z-index: 0;
-    opacity: 0.03;
+    opacity: 0.05;
 }
 
 .footer-logo-large h2 {
+    font-family: var(--font-display);
     font-size: 15rem;
     font-weight: 900;
     color: var(--primary-color);
@@ -733,11 +747,16 @@ body {
     }
 
     .hero-title {
-        font-size: 2rem;
+        font-size: 2.25rem;
     }
 
     .hero-description {
         font-size: 1rem;
+    }
+
+    .hero-lattice .lattice-line,
+    .footer-lattice .lattice-line {
+        display: none;
     }
 
     .hero-buttons {
@@ -888,8 +907,33 @@ body {
 
 /* Accessibility */
 :focus-visible {
-    outline: 2px solid var(--primary-color);
+    outline: 2px solid var(--primary-dark);
     outline-offset: 2px;
+}
+
+/* Reduced motion: fadeInUp elements start at opacity:0 via inline animation
+   and never resolve to visible without the animation running — force them
+   visible. Lattice draw/node-in animations are handled in tokens.css.
+   script.js's IntersectionObserver-driven card reveal (opacity:0/translateY
+   inline styles) is defeated here too since it ignores this media query
+   (PARKED — see docs/STATE.md; not a JS logic change, a CSS override of a
+   rendering symptom). */
+@media (prefers-reduced-motion: reduce) {
+    .hero-title,
+    .hero-description,
+    .hero-buttons,
+    .code-snippet,
+    .code-prompt {
+        animation: none !important;
+        opacity: 1 !important;
+        transform: none !important;
+    }
+
+    .package-card {
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
+    }
 }
 
 /* Print Styles */

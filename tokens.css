@@ -1,0 +1,105 @@
+/* tokens.css — Logia brand kit (mirrors logia-admin docs/design/ui-standards.md)
+   Loaded BEFORE styles.css. Self-hosted fonts, brand additive tokens,
+   dot-grid + lattice signature (verbatim from logia-admin proof.html). */
+
+@font-face {
+  font-family: 'Bricolage Grotesque';
+  src: url('fonts/bricolage-grotesque-700.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('fonts/inter-400.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('fonts/inter-500.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('fonts/inter-600.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'JetBrains Mono';
+  src: url('fonts/jetbrains-mono-500.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  /* brand additive tokens (styles.css :root re-values the old --primary-color
+     etc. to these same hexes; these are the new names blueprints.md/CSS use) */
+  --font-display: 'Bricolage Grotesque', ui-sans-serif, system-ui, sans-serif;
+  --font-sans: 'Inter', ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  --indigo: #3A2FB5;
+  --indigo-deep: #2E2593;
+  --wash: #EEEDFB;
+  --hairline: #E2E4EF;
+  --radius-pill: 9999px;
+}
+
+/* ================= DOT GRID + LATTICE (verbatim from logia-admin proof.html) ================= */
+
+.dot-grid {
+  background-image: radial-gradient(circle, var(--hairline) 1.4px, transparent 1.6px);
+  background-size: 32px 32px;
+}
+
+.lattice-svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+.lattice-line {
+  stroke: var(--hairline);
+  stroke-width: 1.5;
+  fill: none;
+  stroke-dasharray: 900;
+  stroke-dashoffset: 900;
+  animation: lattice-draw 650ms cubic-bezier(0.4,0,0.2,1) forwards;
+}
+.lattice-node {
+  fill: var(--indigo);
+  opacity: 0;
+  transform-box: fill-box;
+  transform-origin: center;
+  transform: scale(0);
+  animation: lattice-node-in 220ms ease-out forwards;
+}
+.lattice-node-plain {
+  fill: none;
+  stroke: var(--hairline);
+  stroke-width: 1.5;
+  opacity: 0;
+  transform-box: fill-box;
+  transform-origin: center;
+  transform: scale(0);
+  animation: lattice-node-in 220ms ease-out forwards;
+}
+@keyframes lattice-draw { to { stroke-dashoffset: 0; } }
+@keyframes lattice-node-in { to { opacity: 1; transform: scale(1); } }
+
+@media (prefers-reduced-motion: reduce) {
+  .lattice-line { animation: none; stroke-dashoffset: 0; }
+  .lattice-node, .lattice-node-plain { animation: none; opacity: 1; transform: scale(1); }
+}

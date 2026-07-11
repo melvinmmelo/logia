@@ -30,6 +30,7 @@ document.addEventListener('DOMContentLoaded', function() {
         mobileMenuToggle.addEventListener('click', () => {
             navMenu.classList.toggle('active');
             mobileMenuToggle.classList.toggle('active');
+            mobileMenuToggle.setAttribute('aria-expanded', mobileMenuToggle.classList.contains('active'));
 
             // Animate hamburger icon
             const spans = mobileMenuToggle.querySelectorAll('span');
