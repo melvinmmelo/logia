@@ -109,5 +109,5 @@ Day a second page ships: internal links + sitemap entries + unique title/meta ea
       keywords-meta removal; H1/title per gate) — feat/seo-foundation,
       verified vs :8090 2026-07-12 (see docs/seo/verification/)
 - [ ] Step 4 wiring (GSC + Bing + GBP — Melvin's accounts)
-- [ ] Step 5 verification vs production (curl checks, validators, Lighthouse)
+- [x] Step 5 verification vs production 2026-07-12 — all curl checks pass; REMAINING: www→non-www host 301 (Vercel domain setting, Melvin one-toggle) — canonical tag mitigates meanwhile; validator/rich-results spot-check after indexing
 - [ ] Step 6 loop wired into /maintain; review 2026-10-11
