@@ -38,15 +38,21 @@ Informational magnet:
 Noted, NOT targeted `[assumed]`: Taglish price-shopper phrasings
 (`murang software developer`…) — intent mismatch for a quality-positioned shop.
 
-## Page ↔ query map — home `/` (paste-ready, Melvin's words to approve)
-- Title: `Custom Software & AI Development in the Philippines | Logia Innovations`
-  (short alt if truncation matters: `Custom Software & AI Development Philippines | Logia`)
+## Page ↔ query map — home `/` (APPROVED by Melvin 2026-07-12 with correction)
+~~Title: `Custom Software & AI Development in the Philippines | Logia
+Innovations`~~ / ~~meta: "...for Philippine SMBs and schools..."~~ / ~~H1:
+`...for Philippine SMBs`~~ — **reversed 2026-07-12, Melvin: "remove
+'Philippines'"** — the country name leaves all customer-facing words:
+- Title: `Custom Software & AI Development | Logia Innovations`
 - Meta description: `Logia Innovations builds custom software, AI
-  integrations, and LMS/HRIS systems for Philippine SMBs and schools.
-  Solo-run, senior-quality engineering — let's talk.`
-- H1 rewrite (audit G1): `Custom Software & AI Development for Philippine
-  SMBs`, slogan demoted to the lead paragraph. Section H2s optionally gain
-  keyword-bearing labels ("Software Development Services").
+  integrations, and LMS/HRIS systems for SMBs and schools. Solo-run,
+  senior-quality engineering — let's talk.`
+- H1: `Custom Software & AI Development for SMBs`, slogan demoted to the
+  lead paragraph.
+Honest note: dropping the location keyword weakens the on-page signal for
+"…philippines" queries (3,4,5) — local intent now rides on GBP + schema
+`areaServed` (machine-readable, not customer-visible; kept `[assumed]`).
+Rankings expectation for those queries adjusts down accordingly.
 
 ## Content gaps → future /spec-feature proposals (ranked by ROI; each is one
 static .html — the cost is writing, not tech)
@@ -97,10 +103,11 @@ Day a second page ships: internal links + sitemap entries + unique title/meta ea
 - [x] Step 0 triage: PUBLIC; prod domain logiainnov.com; no crawl blocks
 - [x] Step 1 audit → audit.md (headline: B1 stale Apache placeholder indexed)
 - [x] Step 2 strategy drafted → this file
-- [ ] Melvin's gate: strategy + title/meta/H1 words approved
-- [ ] Step 3 foundation fixes implemented (canonical, sitemap, robots,
+- [x] Melvin's gate 2026-07-12: approved with correction — "remove 'Philippines'" (reversal recorded above)
+- [x] Step 3 foundation fixes implemented (canonical, sitemap, robots,
       Organization JSON-LD, og:image social card, og:url, dead links,
-      keywords-meta removal; H1/title per gate)
+      keywords-meta removal; H1/title per gate) — feat/seo-foundation,
+      verified vs :8090 2026-07-12 (see docs/seo/verification/)
 - [ ] Step 4 wiring (GSC + Bing + GBP — Melvin's accounts)
 - [ ] Step 5 verification vs production (curl checks, validators, Lighthouse)
 - [ ] Step 6 loop wired into /maintain; review 2026-10-11

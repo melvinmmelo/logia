@@ -620,6 +620,8 @@ body {
 
 .footer-column li {
     margin-bottom: 0.75rem;
+    color: var(--text-secondary);
+    font-size: 0.875rem;
 }
 
 .footer-column a {

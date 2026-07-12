@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /steward/
+
+Sitemap: https://logiainnov.com/sitemap.xml
